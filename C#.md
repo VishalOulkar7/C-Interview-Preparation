@@ -1,4 +1,4 @@
-📑 Table of Contents (C# Interview Questions 1–36)
+📑 Table of Contents (C# Interview Questions )
 
 ### PART 1
 
