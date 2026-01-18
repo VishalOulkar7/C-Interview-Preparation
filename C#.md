@@ -4,59 +4,113 @@
   C# Interview Quetions 
 ----------------------
 1.Have you worked on Any Design Pattern in C# (***)
+
 2.Explain Design Principles in C# (***)
+
 3.How to Authenticate Web API (**)
+
 4.Difference Between Interface and Abstract Class ? (***)
+
 5.When to use Interface and when to Use Abstract Class (**)
+
 6.Exception Handling in C# (**)
+
 7.DIfferent Between Data Abstraction and Encapsulation (*)
+
 8.Explain Private Constructor? Which scenario we use private constructor (***)
+
 9.Different between Convert.ToString() and .ToString() (*)
+
 10.Serialization in C# (**)
+
 11.Generics in c# (***)
+
 12.Events and Delegates in C# (**)
+
 13.COllections in c#(*)
+
 14.Different Between Array and ArrayList in c# (**)
+
 15.String is value type or reference type? (*)
+
 16.What is Reflection in C# (**)
+
 17.Different Between Ref and Out in C# (****)
+
 18.Different Between IEnumarable and IQuarable in c#(****)
+
 19.Garbage Collections in C# (***)
+
 20.Exaplain Method Overloading and Method Overriding(Polymorphisom) in C# (**)
+
 21.Explain Singletop Design Pattern(***)
+
 22.When to Use Static CLass(**)
+
 23.Can we create Static Constructor (**)
+
 24.Types of Constructor (*)
+
 25.Exaplin Inheritance in C# (*)
+
 26.Different Between Var and Dynamic in C# (***)
+
 27.Explain Virtual and Override Key word in c#(*)
+
 28.Explain Threading in C# (**)
+
 29.Exalin async and Await in c# (**)
+
 30.How to do to Bulk Insertion to SQL From C# (*)
+
 31.what is Transactions in c# (*)
+
 32.what is Using in C# (***)
+
 33.Different Between Constant and Read-Only in c# (***)
+
 34.What is Sealed Class in C# (**)
+
 35.Can a private virtual method can be overridden? (*)
+
 36.What’s the difference between the System.Array.CopyTo() and System.Array.Clone() ? (*)
+
 37.What is the difference between Finalize() and Dispose() methods? (**)
+
 38.What is an object pool in .NET? (*)
+
 39.What are Custom Exceptions? (*)
+
 40.What are delegates? (**)
+
 41.How to use nullable types in .Net? (*)
+
 42.What is difference between "is" and "as" operators in c#? (*)
+
 43.What is difference between the "throw" and "throw ex" in .NET? (*)
+
 44.Is C# code is managed or unmanaged code?(*)
+
 45.What is the difference between continue and break statements in C#? (*)
+
 46.What is Boxing and Unboxing? (*)
+
 47.What is namespace in C#? (*)
+
 48.Why to use finally block in C#?
+
 49.if i writte System.Exit in Try block will the execution will go to Finally Block? (**)
+
 50.Can you return multiple values from a function in C#? Provide some examples (**)
+
 51.Explain Anonymous type in C# (**)
+
 52.Explain the difference between Task and Thread in .NET(**)
+
 53.What is the yield keyword used for in C#? (**)
+
 54.Why to use lock statement in C#? (*)
+
 
 C# Interview Questions & Answers
 
