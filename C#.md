@@ -1,95 +1,169 @@
-# C-Interview-Preparation
 
+# 📚 Table of Contents
 
-
-## ⭐ Difficulty Legend
-
-* ⭐ Basic
-* ⭐⭐ Intermediate
-* ⭐⭐⭐ Advanced
-* ⭐⭐⭐⭐ Expert
+1. [Design Patterns & Principles](#design-patterns--principles)
+2. [Web API Authentication](#web-api-authentication)
+3. [OOPS & Core C#](#oops--core-c)
+4. [Exception Handling](#exception-handling)
+5. [Memory & Conversion](#memory--conversion)
+6. [Serialization & Generics](#serialization--generics)
+7. [Delegates & Events](#delegates--events)
+8. [Collections](#collections)
+9. [Advanced Topics](#advanced-topics)
+10. [Multithreading & Async](#multithreading--async)
+11. [Database & Transactions](#database--transactions)
+12. [Performance Optimization](#performance-optimization)
+13. [Tricky Questions (10+ Years)](#tricky-questions-10-years)
 
 ---
 
-# 1. Have You Worked on Any Design Pattern in C#? (⭐⭐⭐)
+# Design Patterns & Principles
+
+---
+
+## 1️⃣ Have You Worked on Any Design Pattern in C#? (***)
 
 ### ✅ Answer:
 
-Yes, I have worked with several design patterns such as:
+Yes, I have worked with multiple design patterns in real projects:
 
-* **Singleton Pattern** – Ensures only one instance of a class
-* **Factory Pattern** – Creates objects without exposing creation logic
-* **Repository Pattern** – Used in data access abstraction
-* **Observer Pattern** – Used for event notifications
-* **Dependency Injection (DI)** – External dependency management
-* **Adapter Pattern** – Allows incompatible interfaces to work together
+### 🔹 Singleton Pattern
 
----
+Ensures only **one instance of a class** exists.
 
-# 2. Explain SOLID Design Principles (⭐⭐⭐)
-
-| Principle | Description                                                                      |
-| --------- | -------------------------------------------------------------------------------- |
-| SRP       | Single Responsibility Principle – One reason to change                           |
-| OCP       | Open/Closed Principle – Open for extension, closed for modification              |
-| LSP       | Liskov Substitution Principle – Derived classes must replace base classes safely |
-| ISP       | Interface Segregation Principle – Avoid fat interfaces                           |
-| DIP       | Dependency Inversion Principle – Depend on abstractions                          |
+**Use Case:** Logging, Configuration Manager
 
 ---
 
-# 3. How to Authenticate Web API? (⭐⭐)
+### 🔹 Factory Pattern
+
+Creates objects **without exposing creation logic**.
+
+**Use Case:** Payment Gateway selection
+
+---
+
+### 🔹 Repository Pattern
+
+Separates **data access logic from business logic**.
+
+**Use Case:** Clean architecture with Entity Framework
+
+---
+
+### 🔹 Observer Pattern
+
+Notifies subscribers when state changes.
+
+**Use Case:** Event-based notifications
+
+---
+
+### 🔹 Dependency Injection (DI)
+
+Provides dependencies externally instead of creating internally.
+
+**Benefits:**
+
+* Loose coupling
+* Easy testing
+* Maintainability
+
+---
+
+### 🔹 Adapter Pattern
+
+Allows incompatible interfaces to work together.
+
+**Use Case:** Integrating third-party APIs
+
+---
+
+## 2️⃣ Explain Design Principles in C# (SOLID) (***)
+
+| Principle   | Meaning                                           |
+| ----------- | ------------------------------------------------- |
+| **S — SRP** | One class should have only one responsibility     |
+| **O — OCP** | Open for extension, closed for modification       |
+| **L — LSP** | Derived classes must replace base classes safely  |
+| **I — ISP** | Avoid forcing clients to implement unused methods |
+| **D — DIP** | Depend on interfaces not concrete classes         |
+
+---
+
+# Web API Authentication
+
+---
+
+## 3️⃣ How to Authenticate Web API? (**)
 
 ### ✅ Methods:
 
-* JWT Token Authentication
-* OAuth 2.0
-* Basic Authentication
-* API Keys
-* Windows Authentication
+### 🔹 JWT Token Authentication
+
+Stateless authentication using tokens.
+
+### 🔹 OAuth 2.0
+
+Used for third-party login (Google, Facebook).
+
+### 🔹 Basic Authentication
+
+Username/password via HTTP headers.
+
+### 🔹 API Keys
+
+Simple key-based authentication.
+
+### 🔹 Windows Authentication
+
+Used in intranet applications.
 
 ---
 
-# 4. Interface vs Abstract Class (⭐⭐⭐)
-
-| Feature              | Interface           | Abstract Class             |
-| -------------------- | ------------------- | -------------------------- |
-| Methods              | Declaration only    | Can contain implementation |
-| Fields               | Not allowed         | Allowed                    |
-| Constructor          | Not allowed         | Allowed                    |
-| Multiple Inheritance | Supported           | Not supported              |
-| Use Case             | Contract definition | Shared base logic          |
+# OOPS & Core C#
 
 ---
 
-# 5. When to Use Interface vs Abstract Class? (⭐⭐)
+## 4️⃣ Interface vs Abstract Class (***)
 
-### ✅ Interface:
-
-* When defining contracts
-* Multiple inheritance required
-
-### ✅ Abstract Class:
-
-* When sharing common behavior
-* Partial implementation needed
+| Feature              | Interface            | Abstract Class            |
+| -------------------- | -------------------- | ------------------------- |
+| Methods              | Declaration only     | Can have implementation   |
+| Fields               | ❌ No                 | ✅ Yes                     |
+| Constructor          | ❌ No                 | ✅ Yes                     |
+| Multiple Inheritance | ✅ Supported          | ❌ Not supported           |
+| Usage                | Contract enforcement | Shared base functionality |
 
 ---
 
-# 6. Exception Handling in C# (⭐⭐)
+## 5️⃣ When to Use Interface vs Abstract Class (**)
+
+### ✅ Use Interface when:
+
+* Multiple classes share behavior contract
+* You want loose coupling
+
+### ✅ Use Abstract Class when:
+
+* You want shared logic
+* Partial implementation required
+
+---
+
+## 6️⃣ Exception Handling in C# (**)
+
+Exception handling prevents application crashes.
 
 ```csharp
-try
-{
-    // Risky code
+try {
+   // Risky code
 }
-catch (Exception ex)
-{
-    // Handle exception
+catch(Exception ex) {
+   // Error handling
 }
-finally
-{
-    // Cleanup
+finally {
+   // Cleanup code
 }
 ```
 
@@ -101,70 +175,68 @@ finally
 
 ---
 
-# 7. Abstraction vs Encapsulation (⭐)
+## 7️⃣ Abstraction vs Encapsulation (*)
+
+### 🔹 Abstraction
+
+Hides implementation details.
+
+### 🔹 Encapsulation
+
+Protects data using access modifiers.
 
 ```csharp
-public abstract class Vehicle
-{
-    public abstract void Start();   // Abstraction
+public abstract class Vehicle {
+   public abstract void Start(); 
 }
 
-public class Car : Vehicle
-{
-    private int speed;              // Encapsulation
-    public override void Start() { }
+public class Car : Vehicle {
+   private int speed;
+   public override void Start() { }
 }
 ```
 
 ---
 
-# 8. Private Constructor (⭐⭐⭐)
+## 8️⃣ Private Constructor (***)
 
-### ✅ Use Cases:
+### Purpose:
 
-* Singleton Pattern
-* Utility Classes
+* Prevent object creation
+* Used in Singleton and Utility classes
 
 ```csharp
-public class Singleton
-{
-    private static Singleton instance;
-
-    private Singleton() { }
-
-    public static Singleton GetInstance()
-    {
-        return instance ??= new Singleton();
-    }
-}
+private Singleton() { }
 ```
 
 ---
 
-# 9. Convert.ToString() vs ToString() (⭐)
+# Memory & Conversion
 
-| Method             | Behavior                 |
-| ------------------ | ------------------------ |
-| .ToString()        | Throws exception if null |
-| Convert.ToString() | Returns empty string     |
+---
+
+## 9️⃣ Convert.ToString() vs ToString() (*)
+
+| Method             | Behavior                      |
+| ------------------ | ----------------------------- |
+| Convert.ToString() | Returns empty string if null  |
+| ToString()         | Throws NullReferenceException |
 
 ```csharp
 object obj = null;
-
 Convert.ToString(obj); // ""
-obj.ToString();        // Exception
+obj.ToString(); // Exception
 ```
 
 ---
 
-# 10. Serialization in C# (⭐⭐)
+# Serialization & Generics
 
-```csharp
-using System.Text.Json;
+---
 
-Person p = new Person { Name = "John", Age = 30 };
-string json = JsonSerializer.Serialize(p);
-```
+## 🔟 Serialization in C# (**)
+
+Serialization converts objects to transferable format.
 
 ### Types:
 
@@ -172,478 +244,392 @@ string json = JsonSerializer.Serialize(p);
 * XML
 * Binary
 
+```csharp
+string json = JsonSerializer.Serialize(obj);
+```
+
 ---
 
-# 11. Generics in C# (⭐⭐⭐)
+## 1️⃣1️⃣ Generics (***)
+
+Allow type-safe reusable code.
 
 ```csharp
-public class GenericClass<T>
-{
-    public T Value { get; set; }
+public class GenericClass<T> {
+ public T Value { get; set; }
 }
 ```
 
 ### Benefits:
 
-* Type safety
-* Reusability
 * Performance
+* Compile-time checking
+* Code reuse
 
 ---
 
-# 12. Events and Delegates (⭐⭐)
+# Delegates & Events
+
+---
+
+## 1️⃣2️⃣ Delegates & Events (**)
+
+### Delegate
+
+References a method.
+
+### Event
+
+Notifies subscribers.
 
 ```csharp
 public delegate void MyDelegate(string msg);
 
-public class EventExample
-{
-    public event MyDelegate MyEvent;
-
-    public void Trigger()
-    {
-        MyEvent?.Invoke("Triggered");
-    }
-}
+public event MyDelegate MyEvent;
 ```
 
 ---
 
-# 13. Collections in C# (⭐)
-
-### Common Types:
-
-* List<T>
-* Dictionary<TKey,TValue>
-* Queue
-* Stack
-* HashSet
-
-```csharp
-List<int> nums = new List<int> {1,2,3};
-nums.Add(4);
-```
+# Collections
 
 ---
 
-# 14. Array vs ArrayList (⭐⭐)
+## 1️⃣3️⃣ Collections in C# (*)
 
-| Feature             | Array          | ArrayList          |
-| ------------------- | -------------- | ------------------ |
-| Type Safety         | Strongly typed | Object based       |
-| Performance         | Fast           | Slower             |
-| Size                | Fixed          | Dynamic            |
-| Namespace           | System         | System.Collections |
-| Generic Alternative | T[]            | List<T>            |
-
-```csharp
-int[] numbers = {1,2,3};
-
-ArrayList list = new ArrayList();
-list.Add(1);
-list.Add("Hello");
-```
-
-✅ Best Practice: Always use `List<T>`
+| Collection | Use               |
+| ---------- | ----------------- |
+| List       | Dynamic array     |
+| Dictionary | Key-value storage |
+| Queue      | FIFO              |
+| Stack      | LIFO              |
+| HashSet    | Unique items      |
 
 ---
 
-# 15. Is String Value Type or Reference Type? (⭐)
+## 1️⃣4️⃣ Array vs ArrayList (⭐⭐)
 
-String is reference type but **immutable**.
+| Feature     | Array | ArrayList |
+| ----------- | ----- | --------- |
+| Type Safe   | Yes   | No        |
+| Performance | Fast  | Slower    |
+| Size        | Fixed | Dynamic   |
 
-```csharp
-string s1 = "Hello";
-string s2 = s1;
-
-s1 = "World";
-
-Console.WriteLine(s2); // Hello
-```
+✅ Use `List<T>` instead
 
 ---
 
-# 16. Reflection in C# (⭐⭐)
+# Advanced Topics
+
+---
+
+## 1️⃣5️⃣ Is string Value or Reference Type? (⭐)
+
+### Answer:
+
+String is a **reference type** but behaves like value type because it is **immutable**.
 
 ```csharp
-Type type = typeof(string);
-var methods = type.GetMethods();
+string a="Hello";
+string b=a;
+a="World";
+```
+
+b remains "Hello"
+
+---
+
+## 1️⃣6️⃣ Reflection (⭐⭐)
+
+Allows runtime inspection.
+
+```csharp
+Type t = typeof(string);
+var methods = t.GetMethods();
 ```
 
 ### Use Cases:
 
-* Dependency Injection
+* DI
 * Serialization
-* Runtime inspection
+* Plugin systems
 
 ---
 
-# 17. ref vs out (⭐⭐⭐⭐)
+## 1️⃣7️⃣ ref vs out (⭐⭐⭐⭐)
 
-| Feature        | ref             | out          |
-| -------------- | --------------- | ------------ |
-| Initialization | Required        | Not required |
-| Purpose        | Modify existing | Return value |
+| Feature        | ref          | out           |
+| -------------- | ------------ | ------------- |
+| Initialization | Required     | Not required  |
+| Usage          | Modify value | Return values |
+
+---
+
+## 1️⃣8️⃣ IEnumerable vs IQueryable (⭐⭐⭐⭐)
+
+| Feature     | IEnumerable | IQueryable |
+| ----------- | ----------- | ---------- |
+| Execution   | Memory      | Database   |
+| Performance | Slower      | Faster     |
+
+---
+
+## 1️⃣9️⃣ Garbage Collection (⭐⭐⭐)
+
+### Generations:
+
+* Gen 0 — Short-lived
+* Gen 1 — Medium
+* Gen 2 — Long-lived
+
+---
+
+## 2️⃣0️⃣ Overloading vs Overriding (⭐⭐)
+
+| Feature     | Overloading | Overriding |
+| ----------- | ----------- | ---------- |
+| Inheritance | ❌           | ✅          |
+| Signature   | Different   | Same       |
+
+---
+
+## 2️⃣1️⃣ Singleton Pattern (⭐⭐⭐)
 
 ```csharp
-void Test(ref int a, out int b)
-{
-    a += 10;
-    b = 20;
-}
+private static readonly Singleton instance = new();
+```
+
+### Use Cases:
+
+* Logging
+* Configuration
+
+---
+
+## 2️⃣2️⃣ Static Class (⭐⭐)
+
+Used for helper methods.
+
+```csharp
+public static class MathHelper { }
 ```
 
 ---
 
-# 18. IEnumerable vs IQueryable (⭐⭐⭐⭐)
+## 2️⃣3️⃣ Static Constructor (⭐⭐)
 
-| Feature     | IEnumerable | IQueryable     |
-| ----------- | ----------- | -------------- |
-| Execution   | In-memory   | Database       |
-| Performance | Slower      | Optimized      |
-| Use Case    | Small data  | Large datasets |
+Runs once per type.
 
 ---
 
-# 19. Garbage Collection (⭐⭐⭐)
+## 2️⃣4️⃣ Types of Constructors (⭐)
 
-### GC Generations:
-
-* Gen 0 → Short lived
-* Gen 1 → Medium
-* Gen 2 → Long lived
-
-```csharp
-GC.Collect(); // Not recommended
-```
+* Default
+* Parameterized
+* Copy
+* Static
 
 ---
 
-# 20. Method Overloading vs Overriding (⭐⭐)
+## 2️⃣5️⃣ Inheritance (⭐)
 
-| Feature     | Overloading  | Overriding |
-| ----------- | ------------ | ---------- |
-| Signature   | Different    | Same       |
-| Inheritance | Not required | Required   |
+Allows reuse of code.
 
 ---
 
-# 21. Singleton Pattern (⭐⭐⭐)
+## 2️⃣6️⃣ var vs dynamic (⭐⭐⭐)
 
-```csharp
-public sealed class Singleton
-{
-    private static readonly Singleton instance = new Singleton();
-    private Singleton() { }
-
-    public static Singleton Instance => instance;
-}
-```
+| Feature      | var  | dynamic |
+| ------------ | ---- | ------- |
+| Compile Time | Yes  | No      |
+| Performance  | Fast | Slow    |
 
 ---
 
-# 22. Static Class (⭐⭐)
-
-```csharp
-public static class MathHelper
-{
-    public static int Square(int x) => x * x;
-}
-```
+# Multithreading & Async
 
 ---
 
-# 23. Static Constructor (⭐⭐)
+## 2️⃣7️⃣ virtual & override (⭐)
 
-```csharp
-class Example
-{
-    static Example()
-    {
-        Console.WriteLine("Called once");
-    }
-}
-```
+Used for runtime polymorphism.
 
 ---
 
-# 24. Types of Constructors (⭐)
+## 2️⃣8️⃣ Threading (⭐⭐)
 
-| Type          | Purpose             |
-| ------------- | ------------------- |
-| Default       | No parameters       |
-| Parameterized | Takes input         |
-| Copy          | Copy object         |
-| Static        | Init static members |
+Allows parallel execution.
 
 ---
 
-# 25. Inheritance (⭐)
+## 2️⃣9️⃣ async & await (⭐⭐)
 
-```csharp
-class Animal { }
-class Dog : Animal { }
-```
+Non-blocking execution.
 
 ---
 
-# 26. var vs dynamic (⭐⭐⭐)
-
-| Feature     | var          | dynamic |
-| ----------- | ------------ | ------- |
-| Resolution  | Compile-time | Runtime |
-| Performance | Fast         | Slow    |
+# Database & Transactions
 
 ---
 
-# 27. virtual vs override (⭐)
+## 3️⃣0️⃣ SqlBulkCopy (⭐)
 
-```csharp
-class Base
-{
-    public virtual void Show() {}
-}
-
-class Derived : Base
-{
-    public override void Show() {}
-}
-```
+Used for fast bulk insert.
 
 ---
 
-# 28. Threading (⭐⭐)
+## 3️⃣1️⃣ Transactions (⭐)
 
-```csharp
-Thread t = new Thread(Print);
-t.Start();
-```
+Ensures atomic operations.
 
 ---
 
-# 29. async / await (⭐⭐)
+## 3️⃣2️⃣ using keyword (⭐⭐⭐)
 
-```csharp
-await Task.Delay(2000);
-```
+Auto resource cleanup.
 
 ---
 
-# 30. SqlBulkCopy (⭐)
-
-```csharp
-SqlBulkCopy bulk = new SqlBulkCopy(conn);
-bulk.WriteToServer(table);
-```
+# Performance Optimization
 
 ---
 
-# 31. Transaction (⭐)
+## 3️⃣3️⃣ const vs readonly (⭐⭐⭐)
 
-```csharp
-using(TransactionScope scope)
-{
-    scope.Complete();
-}
-```
+| Feature        | const | readonly |
+| -------------- | ----- | -------- |
+| Compile time   | Yes   | No       |
+| Runtime assign | ❌     | ✅        |
 
 ---
 
-# 32. using Statement (⭐⭐⭐)
+## 3️⃣4️⃣ sealed class (⭐⭐)
 
-```csharp
-using(StreamWriter sw = new StreamWriter("file.txt"))
-{
-}
-```
+Prevents inheritance.
 
 ---
 
-# 33. const vs readonly (⭐⭐⭐)
+## 3️⃣5️⃣ Private Virtual Override (⭐)
 
-| Feature    | const        | readonly         |
-| ---------- | ------------ | ---------------- |
-| Assignment | Compile time | Constructor time |
+❌ Not possible.
 
 ---
 
-# 34. sealed Class (⭐⭐)
+## 3️⃣6️⃣ CopyTo vs Clone (⭐)
 
-```csharp
-sealed class Secure {}
-```
+Clone creates new array.
 
 ---
 
-# 35. Can Private Virtual Be Overridden? (⭐)
+## 3️⃣7️⃣ Dispose vs Finalize (⭐⭐)
 
-❌ No — private methods are not accessible.
-
----
-
-# 36. Clone vs CopyTo (⭐)
-
-| Feature           | Clone | CopyTo |
-| ----------------- | ----- | ------ |
-| Creates new array | Yes   | No     |
+Dispose is faster and preferred.
 
 ---
 
-# 37. Finalize vs Dispose (⭐⭐)
+## 3️⃣8️⃣ Object Pooling (⭐)
 
-| Feature   | Finalize | Dispose   |
-| --------- | -------- | --------- |
-| Called by | GC       | Developer |
+Improves memory reuse.
 
 ---
 
-# 38. Object Pool (⭐)
+## 3️⃣9️⃣ Custom Exceptions (⭐)
 
-Used for **reusing expensive objects**.
-
----
-
-# 39. Custom Exception (⭐)
-
-```csharp
-class MyException : Exception {}
-```
+Create domain-specific errors.
 
 ---
 
-# 40. Delegate (⭐⭐)
+## 4️⃣0️⃣ Delegates (⭐⭐)
 
-```csharp
-public delegate void MyDelegate(string msg);
-```
+Used for callbacks.
 
 ---
 
-# 41. Nullable Types (⭐)
-
-```csharp
-int? num = null;
-```
+# Tricky Questions (10+ Years)
 
 ---
 
-# 42. is vs as (⭐)
+## 4️⃣1️⃣ Nullable Types (⭐)
 
-```csharp
-obj is string
-obj as string
-```
+Allows value types to be null.
 
 ---
 
-# 43. throw vs throw ex (⭐)
+## 4️⃣2️⃣ is vs as (⭐)
 
-| Feature     | throw     | throw ex |
-| ----------- | --------- | -------- |
-| Stack Trace | Preserved | Lost     |
+Safe type checking.
 
 ---
 
-# 44. Managed vs Unmanaged Code (⭐)
+## 4️⃣3️⃣ throw vs throw ex (⭐)
 
-C# → Managed
-C++ → Unmanaged
-
----
-
-# 45. break vs continue (⭐)
-
-| Keyword  | Behavior       |
-| -------- | -------------- |
-| break    | Exit loop      |
-| continue | Skip iteration |
+Use `throw` to preserve stack trace.
 
 ---
 
-# 46. Boxing & Unboxing (⭐)
+## 4️⃣4️⃣ Managed vs Unmanaged Code (⭐)
 
-```csharp
-object o = 10; // Boxing
-int x = (int)o; // Unboxing
-```
+C# is managed code.
 
 ---
 
-# 47. Namespace (⭐)
+## 4️⃣5️⃣ continue vs break (⭐)
 
-```csharp
-namespace MyApp {}
-```
-
----
-
-# 48. finally Block (⭐)
-
-Always executes.
+continue skips iteration
+break exits loop
 
 ---
 
-# 49. Environment.Exit() (⭐⭐)
+## 4️⃣6️⃣ Boxing & Unboxing (⭐)
 
-❌ finally will NOT execute.
-
----
-
-# 50. Multiple Return Values (⭐⭐)
-
-```csharp
-return (1, "Vishal");
-```
+Performance costly conversions.
 
 ---
 
-# 51. Anonymous Type (⭐⭐)
+## 4️⃣7️⃣ Namespace (⭐)
 
-```csharp
-var emp = new { Name="Vishal", Age=30 };
-```
+Logical code grouping.
 
 ---
 
-# 52. Task vs Thread (⭐⭐)
+## 4️⃣8️⃣ finally block (⭐)
 
-| Feature | Task | Thread |
-| ------- | ---- | ------ |
-| Level   | High | Low    |
+Always executes cleanup.
 
 ---
 
-# 53. yield Keyword (⭐⭐)
+## 4️⃣9️⃣ System.Exit() (⭐⭐)
 
-```csharp
-yield return 1;
-```
+finally block will NOT execute.
 
 ---
 
-# 54. lock Statement (⭐)
+## 5️⃣0️⃣ Return Multiple Values (⭐⭐)
 
-```csharp
-lock(obj)
-{
-}
-```
+Use Tuple, out, ValueTuple.
 
 ---
 
-# ✅ END OF README
+## 5️⃣1️⃣ Anonymous Types (⭐⭐)
+
+Temporary unnamed objects.
 
 ---
 
-If you want, I can also:
+## 5️⃣2️⃣ Task vs Thread (⭐⭐)
 
-✅ Add **Table of Contents with clickable links**
-✅ Add **Badges + GitHub styling header**
-✅ Convert this into **PDF Interview Notes**
-✅ Optimize for **SEO + Recruiter friendly GitHub repo**
-✅ Separate into **Beginner / Intermediate / Senior folders**
+Task is higher abstraction.
 
-Just tell me 👍
+---
 
+## 5️⃣3️⃣ yield keyword (⭐⭐)
 
+Lazy data loading.
 
+---
+
+## 5️⃣4️⃣ lock keyword (⭐)
+
+Thread synchronization.
+ 
+
+Just say **YES** 👍
