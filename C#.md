@@ -246,6 +246,7 @@ List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 numbers.Add(6);
 
 14. Difference Between Array and ArrayList in C#? (⭐⭐)
+
 Feature	Array	ArrayList
 Type Safety	Strongly typed	Not type-safe (stores object)
 Performance	Faster (no boxing/unboxing)	Slower (boxing/unboxing for value types)
@@ -263,6 +264,7 @@ list.Add("Hello"); // No type safety
 🔹 Best Practice: Use List<T> instead of ArrayList for better performance.
 
 15. Is string a Value Type or Reference Type? (⭐)
+
 Answer: string is a reference type, but it behaves like a value type because it is immutable.
 string s1 = "Hello";
 string s2 = s1;
@@ -272,6 +274,7 @@ Console.WriteLine(s2); // Output: Hello (not affected by s1 change)
 🔹 Explanation: Even though s1 is changed, s2 still holds "Hello" because strings are immutable.
 
 16. What is Reflection in C#? (⭐⭐)
+
 Reflection is a feature that allows introspection of assemblies, types, and members at runtime.
 Example:
 using System;
