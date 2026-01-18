@@ -2,6 +2,8 @@
 
 # 📑 Table of Contents (C# Interview Questions)
 
+### PART 1
+
 * [1. Have you worked on Any Design Pattern in C#?](#1-have-you-worked-on-any-design-pattern-in-c)
 * [2. Explain Design Principles in C# (SOLID)?](#2-explain-design-principles-in-c-solid)
 * [3. How to Authenticate Web API?](#3-how-to-authenticate-web-api)
